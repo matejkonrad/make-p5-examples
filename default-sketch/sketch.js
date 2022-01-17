@@ -1,16 +1,16 @@
 function setup() {
-    createCanvas(720, 480);
-    strokeWeight(3);
-    ellipseMode(RADIUS);
+  //   createCanvas(480, 480);
+  createCanvas(windowWidth, windowHeight);
+  fill(255);
+  stroke(102);
 }
 
-let counter = 0;
 function draw() {
-    stroke(random(255), random(255), random(255));
-
-    line(counter, 0, counter, height);
-    counter+=3;
-    if (counter > width) {
-        counter = 0;
+  background(255, 183, 197);
+  fill(255, 247, 189);
+  for (let y = 10; y <= height; y += 8) {
+    for (let x = -width; x <= width; x += 15) {
+      ellipse(x + y, y, 16 - y / 10.0, 16 - y / 10.0);
     }
+  }
 }
